@@ -27,7 +27,7 @@ publishing {
             from(components["versionCatalog"])
             groupId = "$group"
             artifactId = "spring-boot-ms-version-catalog"
-            version = "1.0.0"
+            version = "1.0.1"
         }
     }
 }
