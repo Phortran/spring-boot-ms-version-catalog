@@ -16,6 +16,7 @@ jobs:
       - name: Comment PR if test BOM has changed
         uses: peter-evans/create-or-update-comment@v5
         with:
+          issue-number: ${{ github.event.pull_request.number }}
           body: |
             [ ] - I acknowledge that merging this PR is going to publish the `test-catalog` BOM.
           edit-mode: replace
