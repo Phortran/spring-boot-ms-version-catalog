@@ -1,0 +1,26 @@
+name: Acknowledge incoming publication for Test BOM
+
+on:
+  pull_request:
+    paths:
+      - 'test-catalog/**'
+
+jobs:
+  example_comment_pr:
+    runs-on: ubuntu-latest
+    name: Add a comment to acknowledge publication
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Comment PR if test BOM has changed
+        uses: peter-evans/create-or-update-comment@v5
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            - [ ] I acknowledge that merging this PR is going to publish the `test-catalog` BOM.
+          edit-mode: replace
