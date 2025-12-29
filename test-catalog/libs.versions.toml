@@ -1,5 +1,4 @@
 [versions]
-#spring-boot    = '3.5.9'   # also change in platform-catalog
 junit          = '6.0.1'
 test-cnt       = '1.21.4'
 mockito        = '5.21.0'
@@ -8,11 +7,14 @@ spring-tx      = '7.0.2'
 
 [libraries]
 junit                = { module = 'org.junit:junit-bom', version.ref = 'junit' }
+junit-launcher       = { module = 'org.junit.platform:junit-platform-launcher' }
 assertj              = { module = 'org.assertj:assertj-core', version.ref = 'assertj' }
 mockito-core         = { module = 'org.mockito:mockito-core', version.ref = 'mockito' }
 mockito-junit        = { module = 'org.mockito:mockito-junit-jupiter', version.ref = 'mockito' }
 spring-boot-test     = { module = 'org.springframework.boot:spring-boot-starter-test' }
 spring-boot-test-cnt = { module = 'org.springframework.boot:spring-boot-testcontainers' }
+spring-boot-docker   = { module = 'org.springframework.boot:spring-boot-docker-compose' }
+spring-boot-devtools = { module = 'org.springframework.boot:spring-boot-devtools' }
 spring-tx            = { module = 'org.springframework:spring-tx', version.ref = 'spring-tx' }
 test-cnt-junit       = { module = 'org.testcontainers:junit-jupiter', version.ref = 'test-cnt' }
 test-cnt-postgres    = { module = 'org.testcontainers:postgresql', version.ref = 'test-cnt' }
