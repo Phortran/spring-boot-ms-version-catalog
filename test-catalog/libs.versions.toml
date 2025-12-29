@@ -1,7 +1,5 @@
 [versions]
-spring-boot    = '3.5.9'   # also change in platform-catalog
-flywaydb       = '11.20.0' # also change in platform-catalog
-jooq           = '3.20.10' # also change in platform-catalog
+#spring-boot    = '3.5.9'   # also change in platform-catalog
 junit          = '6.0.1'
 test-cnt       = '1.21.4'
 mockito        = '5.21.0'
@@ -13,13 +11,11 @@ junit                = { module = 'org.junit:junit-bom', version.ref = 'junit' }
 assertj              = { module = 'org.assertj:assertj-core', version.ref = 'assertj' }
 mockito-core         = { module = 'org.mockito:mockito-core', version.ref = 'mockito' }
 mockito-junit        = { module = 'org.mockito:mockito-junit-jupiter', version.ref = 'mockito' }
-spring-boot-test     = { module = 'org.springframework.boot:spring-boot-starter-test', version.ref = 'spring-boot' }
-spring-boot-test-cnt = { module = 'org.springframework.boot:spring-boot-testcontainers', version.ref = 'spring-boot' }
+spring-boot-test     = { module = 'org.springframework.boot:spring-boot-starter-test' }
+spring-boot-test-cnt = { module = 'org.springframework.boot:spring-boot-testcontainers' }
 spring-tx            = { module = 'org.springframework:spring-tx', version.ref = 'spring-tx' }
 test-cnt-junit       = { module = 'org.testcontainers:junit-jupiter', version.ref = 'test-cnt' }
 test-cnt-postgres    = { module = 'org.testcontainers:postgresql', version.ref = 'test-cnt' }
-jooq                 = { module = 'org.jooq:jooq', version.ref = 'jooq' }
-flyway               = { module = 'org.flywaydb:flyway-core', version.ref = 'flywaydb' }
 
 [bundles]
 mockito     = [ 'mockito-core', 'mockito-junit' ]

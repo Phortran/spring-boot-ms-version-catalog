@@ -1,13 +1,15 @@
 [versions]
 spring-boot  = '3.5.9'   # also change in test-catalog
-flywaydb     = '11.20.0' # also change in test-catalog
-jooq         = '3.20.10' # also change in test-catalog
+spring-bom   = '1.1.7'
+flywaydb     = '11.20.0'
+jooq         = '3.20.10'
 spring-data  = '3.5.7'
 slf4j        = '2.0.17'
 springdoc    = '1.8.0'
 openapi-gen  = '7.18.0'
 spotbugs     = '6.1.6'
 mapstruct    = '1.6.3'
+mapstr-lmb   = '0.2.0'
 openapi-jack = '0.2.8'
 logback      = '1.5.23'
 logback-ac   = '2.0.7'
@@ -23,8 +25,10 @@ spring-boot-jpa      = { module = 'org.springframework.boot:spring-boot-starter-
 spring-jpa           = { module = 'org.springframework.data:spring-data-jpa', version.ref = 'spring-data' }
 openapi-jack         = { module = 'org.openapitools:jackson-databind-nullable', version.ref = 'openapi-jack' }
 springdoc-openapi-ui = { module = 'org.springdoc:springdoc-openapi-ui', version.ref = 'springdoc' }
+lombok               = { module = 'org.projectlombok:lombok' }
 mapstruct            = { module = 'org.mapstruct:mapstruct', version.ref = 'mapstruct' }
 mapstruct-processor  = { module = 'org.mapstruct:mapstruct-processor', version.ref = 'mapstruct' }
+mapstruct-lombok     = { module = 'org.projectlombok:lombok-mapstruct-binding', version.ref = 'mapstr-lmb' }
 logback-classic      = { module = 'ch.qos.logback:logback-classic', version.ref = 'logback' }
 logback-core         = { module = 'ch.qos.logback:logback-core', version.ref = 'logback' }
 logback-access       = { module = 'ch.qos.logback.access:logback-access-common', version.ref = 'logback-ac' }
@@ -41,6 +45,7 @@ logback            = [ 'logback-classic', 'logback-core', 'logback-access' ]
 
 [plugins]
 spring-boot = { id = 'org.springframework.boot', version.ref = 'spring-boot' }
+spring-bom  = { id = 'io.spring.dependency-management', version = 'spring-bom' }
 openapi-gen = { id = 'org.openapi.generator', version.ref = 'openapi-gen' }
 spotbugs    = { id = 'com.github.spotbugs', version.ref = 'spotbugs' }
 flyway      = { id = 'org.flywaydb.flyway', version.ref = 'flywaydb' }
