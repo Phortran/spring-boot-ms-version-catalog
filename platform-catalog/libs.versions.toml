@@ -45,7 +45,7 @@ logback            = [ 'logback-classic', 'logback-core', 'logback-access' ]
 
 [plugins]
 spring-boot = { id = 'org.springframework.boot', version.ref = 'spring-boot' }
-spring-bom  = { id = 'io.spring.dependency-management', version = 'spring-bom' }
+spring-bom  = { id = 'io.spring.dependency-management', version.ref = 'spring-bom' }
 openapi-gen = { id = 'org.openapi.generator', version.ref = 'openapi-gen' }
 spotbugs    = { id = 'com.github.spotbugs', version.ref = 'spotbugs' }
 flyway      = { id = 'org.flywaydb.flyway', version.ref = 'flywaydb' }
