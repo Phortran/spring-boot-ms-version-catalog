@@ -1,0 +1,20 @@
+name: Acknowledge incoming publication for Platform BOM
+
+on:
+  pull_request:
+    paths:
+      - 'platform-catalog/**'
+
+jobs:
+  example_comment_pr:
+    runs-on: ubuntu-latest
+    name: Add a comment to acknowledge publication
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Comment PR if platform BOM has changed
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          message: |
+            [ ] - I acknowledge that merging this PR is going to publish the `platform-catalog` BOM.
