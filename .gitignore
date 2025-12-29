@@ -5,6 +5,9 @@
 # Ignore Gradle GUI config
 gradle-app.setting
 
+# Ignore IDE configuration for this repo
+.idea
+
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
 
@@ -19,3 +22,6 @@ gradle-app.setting
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+# Ignore Gradle build output directory
+build
