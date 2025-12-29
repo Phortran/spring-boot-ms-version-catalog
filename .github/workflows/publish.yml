@@ -30,13 +30,15 @@ jobs:
         uses: gradle/actions/setup-gradle@v5
 
       - name: Publish platform BOM to GitHub Packages
-        run: ./gradlew platform-catalog:publish
+        if: contains(github.event.head_commit.modified, 'platform-catalog/')
+        run: ./gradlew :platform-catalog:publish
         env:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish test BOM to GitHub Packages
-        run: ./gradlew test-catalog:publish
+        if: contains(github.event.head_commit.modified, 'test-catalog/')
+        run: ./gradlew :test-catalog:publish
         env:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
