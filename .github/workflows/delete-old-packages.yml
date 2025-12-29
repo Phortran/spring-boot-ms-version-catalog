@@ -1,0 +1,30 @@
+name: Delete old packages
+
+on:
+  schedule:
+    - cron: "0 0 1 * *"
+
+jobs:
+  clean-old-packages:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Delete all pre-release platform BOM package versions except latest 3
+        uses: actions/delete-package-versions@v5
+        with:
+          package-name: 'com.panopticode.spring-boot-ms-version-catalog'
+          package-type: 'maven'
+          min-versions-to-keep: 3
+          delete-only-pre-release-versions: "true"
+
+      - name: Delete all pre-release test BOM package versions except latest 3
+        uses: actions/delete-package-versions@v5
+        with:
+          package-name: 'com.panopticode.ms-test-version-catalog'
+          package-type: 'maven'
+          min-versions-to-keep: 3
+          delete-only-pre-release-versions: "true"
