@@ -18,5 +18,5 @@ jobs:
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            [ ] - I acknowledge that merging this PR is going to publish the `platform-catalog` BOM.
+            - [ ] I acknowledge that merging this PR is going to publish the `platform-catalog` BOM.
           edit-mode: replace
