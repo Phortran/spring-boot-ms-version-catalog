@@ -6,7 +6,9 @@
 version: 2
 updates:
   - package-ecosystem: "gradle"
-    directory: "/" # Location of package manifests
+    directories:
+      - /platform-catalog
+      - /test-catalog
     schedule:
       interval: "monthly"
     target-branch: "develop"
