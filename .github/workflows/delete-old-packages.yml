@@ -13,18 +13,18 @@ jobs:
       packages: write
 
     steps:
-      - name: Delete all pre-release platform BOM package versions except latest 3
+      - name: Delete all pre-release platform BOM package versions except latest 20
         uses: actions/delete-package-versions@v5
         with:
           package-name: 'com.panopticode.spring-boot-ms-version-catalog'
           package-type: 'maven'
-          min-versions-to-keep: 3
+          min-versions-to-keep: 20
           delete-only-pre-release-versions: "true"
 
-      - name: Delete all pre-release test BOM package versions except latest 3
+      - name: Delete all pre-release test BOM package versions except latest 10
         uses: actions/delete-package-versions@v5
         with:
           package-name: 'com.panopticode.ms-test-version-catalog'
           package-type: 'maven'
-          min-versions-to-keep: 3
+          min-versions-to-keep: 10
           delete-only-pre-release-versions: "true"

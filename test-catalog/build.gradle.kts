@@ -5,7 +5,7 @@ plugins {
 
 catalog {
     versionCatalog {
-        from(files("libs.versions.toml"))
+        from(files("gradle/libs.versions.toml"))
     }
 }
 
@@ -27,7 +27,7 @@ publishing {
             from(components["versionCatalog"])
             groupId = "$group"
             artifactId = "ms-test-version-catalog"
-            version = "1.0.3"
+            version = "1.0.4"
         }
     }
 }
