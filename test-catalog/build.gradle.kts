@@ -27,7 +27,7 @@ publishing {
             from(components["versionCatalog"])
             groupId = "$group"
             artifactId = "ms-test-version-catalog"
-            version = "1.0.2"
+            version = "1.0.3"
         }
     }
 }
