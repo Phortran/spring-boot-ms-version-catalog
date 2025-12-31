@@ -15,7 +15,7 @@ logback      = '1.5.23'
 logback-ac   = '2.0.7'
 p6spy        = '1.10.0'
 checkstyle   = '10.21.3'
-postgres     = '42.7.5'
+postgres     = '42.7.8'
 jaxb         = '4.0.6'
 findsecbugs  = '1.14.0'
 
