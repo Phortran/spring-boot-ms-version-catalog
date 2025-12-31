@@ -9,6 +9,10 @@ catalog {
     }
 }
 
+repositories {
+    mavenCentral()
+}
+
 publishing {
     publishing {
         repositories {
