@@ -7,9 +7,11 @@ version: 2
 updates:
   - package-ecosystem: "gradle"
     directories:
-      - /platform-catalog
-      - /test-catalog
+      - /platform-catalog     # dependabot will look for build.gradle.kts and ./gradle/libs.versions.toml in this folder
+      - /test-catalog         # dependabot will look for build.gradle.kts and ./gradle/libs.versions.toml in this folder
     schedule:
       interval: "monthly"
+    exclude-paths:
+      - build.gradle.kts     # exclude build files since dependencies live exclusively in the toml files
     target-branch: "develop"
     open-pull-requests-limit: 20
