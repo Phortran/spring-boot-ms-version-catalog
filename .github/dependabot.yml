@@ -4,12 +4,22 @@
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 version: 2
+
+registries:
+  github-pkg-reg:
+    type: maven-repository
+    url: https://maven.pkg.github.com/Phortran/spring-boot-ms-version-catalog
+    username: ${{ secrets.GPR_USER }}
+    password: ${{ secrets.GPR_KEY }}
+
 updates:
   - package-ecosystem: "gradle"
     directories:
-      - /platform-catalog
-      - /test-catalog
+      - /platform-catalog     # dependabot will look for build.gradle.kts and ./gradle/libs.versions.toml in this folder
+      - /test-catalog         # dependabot will look for build.gradle.kts and ./gradle/libs.versions.toml in this folder
     schedule:
       interval: "monthly"
+    registries:
+      - github-pkg-reg
     target-branch: "develop"
     open-pull-requests-limit: 20

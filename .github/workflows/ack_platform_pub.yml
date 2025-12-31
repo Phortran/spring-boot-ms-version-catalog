@@ -5,6 +5,10 @@ on:
     paths:
       - 'platform-catalog/**'
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
   example_comment_pr:
     runs-on: ubuntu-latest

@@ -9,6 +9,10 @@ catalog {
     }
 }
 
+repositories {
+    mavenCentral()
+}
+
 publishing {
     publishing {
         repositories {
@@ -27,7 +31,7 @@ publishing {
             from(components["versionCatalog"])
             groupId = "$group"
             artifactId = "spring-boot-ms-version-catalog"
-            version = "1.0.6"
+            version = "1.0.7"
         }
     }
 }
