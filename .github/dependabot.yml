@@ -9,8 +9,8 @@ registries:
   github-pkg-reg:
     type: maven-repository
     url: https://maven.pkg.github.com/Phortran/spring-boot-ms-version-catalog
-    username: ${{ github.actor }}
-    password: ${{ secrets.GITHUB_TOKEN }}
+    username: ${{ secrets.GPR_USER }}
+    password: ${{ secrets.GPR_KEY }}
 
 updates:
   - package-ecosystem: "gradle"
