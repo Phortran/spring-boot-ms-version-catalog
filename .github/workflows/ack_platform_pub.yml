@@ -22,5 +22,6 @@ jobs:
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            - [ ] I acknowledge that merging this PR is going to publish the `platform-catalog` BOM.
+            - [ ] I acknowledge that merging this PR is going to publish the `platform-catalog` BOM
+                  and that I have updated the version number accordingly in `platform-catalog/build.gradle.kts`
           edit-mode: replace
