@@ -26,5 +26,6 @@ jobs:
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            - [ ] I acknowledge that merging this PR is going to publish the `test-catalog` BOM.
+            - [ ] I acknowledge that merging this PR is going to publish the `test-catalog` BOM
+                  and that I have updated the version number accordingly in `test-catalog/build.gradle.kts`
           edit-mode: replace
