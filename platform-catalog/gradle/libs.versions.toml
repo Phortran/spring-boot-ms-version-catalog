@@ -18,6 +18,7 @@ checkstyle   = '12.3.1'
 postgres     = '42.7.8'
 jaxb         = '4.0.6'
 findsecbugs  = '1.14.0'
+validcheck   = '0.9.8'
 
 [libraries]
 slf4j-api            = { module = 'org.slf4j:slf4j-api', version.ref = 'slf4j' }
@@ -43,6 +44,7 @@ checkstyle           = { module = 'com.puppycrawl.tools:checkstyle', version.ref
 postgres             = { module = 'org.postgresql:postgresql', version.ref = 'postgres' }
 jaxb                 = { module = 'org.glassfish.jaxb:jaxb-runtime', version.ref = 'jaxb' }
 findsecbugs          = { module = 'com.h3xstream.findsecbugs:findsecbugs-plugin', version.ref = 'findsecbugs' }
+validcheck           = { module = 'io.github.ag-libs.validcheck:validcheck', version.ref = 'validcheck' }
 
 [bundles]
 spring-boot        = [ 'spring-boot-web', 'spring-boot-actuator', 'springdoc-openapi-ui' ]
