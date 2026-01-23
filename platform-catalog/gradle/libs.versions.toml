@@ -18,7 +18,7 @@ checkstyle   = '12.3.1'
 postgres     = '42.7.8'
 jaxb         = '4.0.6'
 findsecbugs  = '1.14.0'
-validcheck   = '0.9.8'
+validcheck   = '0.9.9'
 
 [libraries]
 slf4j-api            = { module = 'org.slf4j:slf4j-api', version.ref = 'slf4j' }
