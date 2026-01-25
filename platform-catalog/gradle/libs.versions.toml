@@ -40,6 +40,7 @@ p6spy                = { module = 'com.github.gavlyukovskiy:p6spy-spring-boot-st
 flyway-core          = { module = 'org.flywaydb:flyway-core', version.ref = 'flywaydb' }
 flyway-postgres      = { module = 'org.flywaydb:flyway-database-postgresql', version.ref = 'flywaydb' }
 jooq                 = { module = 'org.jooq:jooq', version.ref = 'jooq' }
+jooq-jackson-ext     = { module = 'org.jooq:jooq-jackson-extensions', version.ref = 'jooq' }
 checkstyle           = { module = 'com.puppycrawl.tools:checkstyle', version.ref = 'checkstyle' }
 postgres             = { module = 'org.postgresql:postgresql', version.ref = 'postgres' }
 jaxb                 = { module = 'org.glassfish.jaxb:jaxb-runtime', version.ref = 'jaxb' }
