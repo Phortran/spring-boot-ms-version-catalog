@@ -1,61 +1,63 @@
-[versions]
-spring-boot  = '3.5.9'   # also change in test-catalog
-spring-bom   = '1.1.7'
+[versions] # Keep alphabetical order
+checkstyle   = '12.3.1'
+commons      = '2.21.0'
+findsecbugs  = '1.14.0'
 flywaydb     = '11.20.0'
+jaxb         = '4.0.6'
 jooq         = '3.20.10'
-spring-data  = '3.5.7'
-slf4j        = '2.0.17'
-springdoc    = '1.8.0'
-openapi-gen  = '7.18.0'
-spotbugs     = '6.4.8'
-mapstruct    = '1.6.3'
-mapstr-lmb   = '0.2.0'
-openapi-jack = '0.2.8'
 logback      = '1.5.23'
 logback-ac   = '2.0.7'
+mapstr-lmb   = '0.2.0'
+mapstruct    = '1.6.3'
+openapi-gen  = '7.18.0'
+openapi-jack = '0.2.8'
 p6spy        = '1.10.0'
-checkstyle   = '12.3.1'
 postgres     = '42.7.8'
-jaxb         = '4.0.6'
-findsecbugs  = '1.14.0'
+slf4j        = '2.0.17'
+spotbugs     = '6.4.8'
+spring-bom   = '1.1.7'
+spring-boot  = '3.5.9'   # also change in test-catalog
+spring-data  = '3.5.7'
+springdoc    = '1.8.0'
 validcheck   = '0.9.9'
 
-[libraries]
+[libraries] # Keep alphabetical order
+checkstyle           = { module = 'com.puppycrawl.tools:checkstyle', version.ref = 'checkstyle' }
+commons-io           = { module = 'commons-io:commons-io', version.ref = 'commons' }
+findsecbugs          = { module = 'com.h3xstream.findsecbugs:findsecbugs-plugin', version.ref = 'findsecbugs' }
+flyway-core          = { module = 'org.flywaydb:flyway-core', version.ref = 'flywaydb' }
+flyway-postgres      = { module = 'org.flywaydb:flyway-database-postgresql', version.ref = 'flywaydb' }
+jaxb                 = { module = 'org.glassfish.jaxb:jaxb-runtime', version.ref = 'jaxb' }
+jooq-jackson-ext     = { module = 'org.jooq:jooq-jackson-extensions', version.ref = 'jooq' }
+jooq                 = { module = 'org.jooq:jooq', version.ref = 'jooq' }
+logback-access       = { module = 'ch.qos.logback.access:logback-access-common', version.ref = 'logback-ac' }
+logback-classic      = { module = 'ch.qos.logback:logback-classic', version.ref = 'logback' }
+logback-core         = { module = 'ch.qos.logback:logback-core', version.ref = 'logback' }
+lombok               = { module = 'org.projectlombok:lombok' }
+mapstruct-lombok     = { module = 'org.projectlombok:lombok-mapstruct-binding', version.ref = 'mapstr-lmb' }
+mapstruct            = { module = 'org.mapstruct:mapstruct', version.ref = 'mapstruct' }
+mapstruct-processor  = { module = 'org.mapstruct:mapstruct-processor', version.ref = 'mapstruct' }
+openapi-jack         = { module = 'org.openapitools:jackson-databind-nullable', version.ref = 'openapi-jack' }
+p6spy                = { module = 'com.github.gavlyukovskiy:p6spy-spring-boot-starter', version.ref = 'p6spy' }
+postgres             = { module = 'org.postgresql:postgresql', version.ref = 'postgres' }
 slf4j-api            = { module = 'org.slf4j:slf4j-api', version.ref = 'slf4j' }
-spring-boot-web      = { module = 'org.springframework.boot:spring-boot-starter-web', version.ref = 'spring-boot' }
 spring-boot-actuator = { module = 'org.springframework.boot:spring-boot-starter-actuator', version.ref = 'spring-boot' }
 spring-boot-jooq     = { module = 'org.springframework.boot:spring-boot-starter-jooq', version.ref = 'spring-boot' }
 spring-boot-jpa      = { module = 'org.springframework.boot:spring-boot-starter-data-jpa', version.ref = 'spring-boot' }
-spring-jpa           = { module = 'org.springframework.data:spring-data-jpa', version.ref = 'spring-data' }
-openapi-jack         = { module = 'org.openapitools:jackson-databind-nullable', version.ref = 'openapi-jack' }
+spring-boot-web      = { module = 'org.springframework.boot:spring-boot-starter-web', version.ref = 'spring-boot' }
 springdoc-openapi-ui = { module = 'org.springdoc:springdoc-openapi-ui', version.ref = 'springdoc' }
-lombok               = { module = 'org.projectlombok:lombok' }
-mapstruct            = { module = 'org.mapstruct:mapstruct', version.ref = 'mapstruct' }
-mapstruct-processor  = { module = 'org.mapstruct:mapstruct-processor', version.ref = 'mapstruct' }
-mapstruct-lombok     = { module = 'org.projectlombok:lombok-mapstruct-binding', version.ref = 'mapstr-lmb' }
-logback-classic      = { module = 'ch.qos.logback:logback-classic', version.ref = 'logback' }
-logback-core         = { module = 'ch.qos.logback:logback-core', version.ref = 'logback' }
-logback-access       = { module = 'ch.qos.logback.access:logback-access-common', version.ref = 'logback-ac' }
-p6spy                = { module = 'com.github.gavlyukovskiy:p6spy-spring-boot-starter', version.ref = 'p6spy' }
-flyway-core          = { module = 'org.flywaydb:flyway-core', version.ref = 'flywaydb' }
-flyway-postgres      = { module = 'org.flywaydb:flyway-database-postgresql', version.ref = 'flywaydb' }
-jooq                 = { module = 'org.jooq:jooq', version.ref = 'jooq' }
-jooq-jackson-ext     = { module = 'org.jooq:jooq-jackson-extensions', version.ref = 'jooq' }
-checkstyle           = { module = 'com.puppycrawl.tools:checkstyle', version.ref = 'checkstyle' }
-postgres             = { module = 'org.postgresql:postgresql', version.ref = 'postgres' }
-jaxb                 = { module = 'org.glassfish.jaxb:jaxb-runtime', version.ref = 'jaxb' }
-findsecbugs          = { module = 'com.h3xstream.findsecbugs:findsecbugs-plugin', version.ref = 'findsecbugs' }
+spring-jpa           = { module = 'org.springframework.data:spring-data-jpa', version.ref = 'spring-data' }
 validcheck           = { module = 'io.github.ag-libs.validcheck:validcheck', version.ref = 'validcheck' }
 
-[bundles]
+[bundles] # Keep alphabetical order
+logback            = [ 'logback-classic', 'logback-core', 'logback-access' ]
 spring-boot        = [ 'spring-boot-web', 'spring-boot-actuator', 'springdoc-openapi-ui' ]
 spring-persistence = [ 'spring-boot-jooq', 'spring-boot-jpa', 'spring-jpa' ]
-logback            = [ 'logback-classic', 'logback-core', 'logback-access' ]
 
-[plugins]
-spring-boot = { id = 'org.springframework.boot', version.ref = 'spring-boot' }
-spring-bom  = { id = 'io.spring.dependency-management', version.ref = 'spring-bom' }
-openapi-gen = { id = 'org.openapi.generator', version.ref = 'openapi-gen' }
-spotbugs    = { id = 'com.github.spotbugs', version.ref = 'spotbugs' }
+[plugins] # Keep alphabetical order
 flyway      = { id = 'org.flywaydb.flyway', version.ref = 'flywaydb' }
 jooq        = { id = 'org.jooq.jooq-codegen-gradle', version.ref = 'jooq' }
+openapi-gen = { id = 'org.openapi.generator', version.ref = 'openapi-gen' }
+spotbugs    = { id = 'com.github.spotbugs', version.ref = 'spotbugs' }
+spring-boot = { id = 'org.springframework.boot', version.ref = 'spring-boot' }
+spring-bom  = { id = 'io.spring.dependency-management', version.ref = 'spring-bom' }
