@@ -3,7 +3,7 @@ junit          = '6.0.1'
 test-cnt       = '1.21.4'
 mockito        = '5.21.0'
 assertj        = '3.27.6'
-spring-tx      = '7.0.2'
+spring-tx      = '7.0.3'
 
 [libraries]
 junit                = { module = 'org.junit:junit-bom', version.ref = 'junit' }
