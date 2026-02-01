@@ -1,5 +1,5 @@
 [versions] # Keep alphabetical order
-checkstyle   = '12.3.1'
+checkstyle   = '13.1.0'
 commons      = '2.21.0'
 findsecbugs  = '1.14.0'
 flywaydb     = '11.20.0'
