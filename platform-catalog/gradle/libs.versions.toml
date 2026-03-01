@@ -19,7 +19,7 @@ spring-bom   = '1.1.7'
 spring-boot  = '3.5.9'   # also change in test-catalog
 spring-data  = '3.5.7'
 springdoc    = '1.8.0'
-validcheck   = '0.10.0'
+validcheck   = '0.11.0'
 
 [libraries] # Keep alphabetical order
 checkstyle           = { module = 'com.puppycrawl.tools:checkstyle', version.ref = 'checkstyle' }
