@@ -17,7 +17,7 @@ slf4j        = '2.0.17'
 spotbugs     = '6.4.8'
 spring-bom   = '1.1.7'
 spring-boot  = '3.5.9'   # also change in test-catalog
-spring-data  = '3.5.7'
+spring-data  = '4.0.5'
 springdoc    = '1.8.0'
 validcheck   = '0.10.0'
 
