@@ -1,6 +1,6 @@
 [versions] # Keep alphabetical order
 checkstyle   = '12.3.1'
-commons      = '2.21.0'
+commons      = '2.22.0'
 findsecbugs  = '1.14.0'
 flywaydb     = '11.20.0'
 jaxb         = '4.0.6'
